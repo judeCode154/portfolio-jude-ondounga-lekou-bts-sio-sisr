@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+    File: projet.html
+    Purpose: Page listant les projets et réalisations techniques (SISR).
+    Structure: header (nav) + main content contenant des cartes de projets.
+    Tips: Renommer ou structurer chaque projet dans un <article> si la liste grandit.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+    <title>Projets systèmes et réseaux | Jude ONDOUNGA-LEKOU</title>
+    <meta name="description" content="Découvrez les projets de Jude ONDOUNGA-LEKOU en BTS SIO : réseaux, systèmes, haute disponibilité et conception web.">
+    <meta name="author" content="Jude ONDOUNGA-LEKOU">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d1b2a">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Projets systèmes et réseaux | Jude ONDOUNGA-LEKOU">
+    <meta property="og:description" content="Projets et réalisations en infrastructure, systèmes, réseaux et conception web.">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="nav.js" defer></script>
+    <script src="language.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Barre de navigation fixe (réutilisée sur toutes les pages) -->
+    <header class="navbar">
+        <div class="logo-area">
+            <div class="avatar"><img src="images/profil_jude2.png" alt="Jude"></div>
+            <span class="bts-text">BTS SIO</span>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#a-propos">À propos</a></li>
+                <li><a href="index.html#parcours">Parcours</a></li>
+                <li><a href="index.html#competences">Compétences</a></li>
+                <li><a href="index.html#entreprise">Entreprise</a></li>
+                <li><a href="index.html#veille">Veille Technologique</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Épreuves <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="epreuve-e4.html">Épreuve E4</a>
+                        <a href="epreuve-e5.html">Épreuve E5</a>
+                        <a href="certifications.html">Certifications</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="projet.html" class="btn-projet active-btn">Projet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main: Contenu principal de la page projets -->
+    <main class="page-container">
+        <h1 class="page-title">Mes projets</h1>
+        <p class="page-subtitle">Découvrez mes réalisations en systèmes, réseaux et conception web. Les documents disponibles peuvent être téléchargés depuis chaque projet.</p>
+
+        <section class="project-grid" aria-label="Liste des projets">
+            <article class="card project-card">
+                <img class="project-image" src="images/vlan_mode_trunk_mode_access.jpg" alt="Affiche du projet VLAN en modes trunk et access">
+                <h2><i class="fas fa-network-wired" aria-hidden="true"></i> Configuration de VLAN en modes access et trunk</h2>
+                <div class="project-card-content">
+                    <p>Création et configuration de VLAN avec Cisco Packet Tracer : ports en mode access pour connecter les équipements et ports en mode trunk pour transporter plusieurs VLAN entre les commutateurs.</p>
+                    <p><strong>Outil :</strong> Cisco Packet Tracer</p>
+                    <div class="project-documents">
+                        <h3>Fichier du projet</h3>
+                        <a class="project-download" href="pdf/projet_vlan_mode_trunck_mode_access.pkt" download>
+                            <i class="fas fa-download" aria-hidden="true"></i> Télécharger le projet Packet Tracer (.pkt)
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <h2><i class="fas fa-server" aria-hidden="true"></i> Serveur Active Directory, DNS et DHCP</h2>
+                <div class="project-card-content">
+                    <p>Virtualisation d'un environnement d'entreprise avec gestion des utilisateurs, stratégies de groupe et services réseau.</p>
+                    <p><strong>Technologies :</strong> Windows Server, Active Directory, DNS, DHCP, VMware / Proxmox.</p>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <img class="project-image" src="images/load%20balacer_et_keepalive_haproxy2.jpg" alt="Projet de répartition de charge avec HAProxy et Keepalived">
+                <h2><i class="fas fa-scale-balanced" aria-hidden="true"></i> Load Balancer HAProxy &amp; Keepalived</h2>
+                <div class="project-card-content">
+                    <span class="project-badge">Projet de groupe</span>
+                    <p>Projet de groupe autour de la mise en place d'une solution de répartition de charge et de haute disponibilité avec HAProxy et Keepalived.</p>
+                    <p><strong>Technologies :</strong> HAProxy, Keepalived.</p>
+                    <div class="project-documents">
+                        <h3>Document disponible</h3>
+                        <a class="project-download" href="pdf/Projet_%20LOAD_BALANCER_HAProxy_%26_Keepalived.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger le dossier du projet
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <img class="project-image" src="images/autobizz2.jpg" alt="Visuel du site web AutoBizz">
+                <h2><i class="fas fa-laptop-code" aria-hidden="true"></i> Conception du site web AutoBizz</h2>
+                <div class="project-card-content">
+                    <span class="project-badge">Projet de groupe</span>
+                    <p>Conception et réalisation en équipe d'un site web nommé AutoBizz.</p>
+                    <div class="project-documents">
+                        <h3>Documents disponibles</h3>
+                        <a class="project-download" href="pdf/Guide%20utilisateur_AutoBizz.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger le guide utilisateur
+                        </a>
+                        <a class="project-download" href="pdf/devis_du_projet_AutoBizz.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger le devis du projet
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <h2><i class="fas fa-shield-halved" aria-hidden="true"></i> Audit de sécurité et durcissement système</h2>
+                <div class="project-card-content">
+                    <p>Analyse de sécurité d'un environnement Linux / Windows et mise en place de mesures de durcissement.</p>
+                    <p><strong>Technologies :</strong> Debian, WireGuard, Fail2ban, UFW.</p>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <img class="project-image" src="images/Debian%2013%2C%20GLPI%2C%20Windows%20Server%2C%20Active%20Directory%2C%20pfSense..jpg" alt="Visuel du projet Debian 13, GLPI, Windows Server, Active Directory et pfSense">
+                <h2><i class="fas fa-diagram-project" aria-hidden="true"></i> Environnement de services informatiques</h2>
+                <div class="project-card-content">
+                    <span class="project-badge project-badge-progress">Projet en cours</span>
+                    <p>Mise en place d'un environnement combinant gestion de parc, annuaire, services systèmes et pare-feu.</p>
+                    <p><strong>Technologies prévues :</strong> Debian 13, GLPI, Windows Server, Active Directory, pfSense.</p>
+                    <div class="project-documents">
+                        <h3>Document disponible</h3>
+                        <a class="project-download" href="pdf/Debian%2013%2C%20GLPI%2C%20Windows%20Server%2C%20Active%20Directory%2C%20pfSense..pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger le document du projet
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

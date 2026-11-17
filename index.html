@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+    File: index.html
+    Purpose: Page d'accueil du portfolio de Jude ONDOUNGA-LEKOU.
+    Structure: Header (nav) → Hero → À propos → Spécialisation → Parcours → Compétences → Entreprise → Veille → Footer/Contact
+    Notes:
+        - Ancres disponibles: #a-propos, #parcours, #competences, #entreprise, #veille, #contact
+        - Les styles sont dans `style.css` et les icônes utilisent Font Awesome.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+    <title>Jude ONDOUNGA-LEKOU | Portfolio étudiant BTS SIO SISR</title>
+    <meta name="description" content="Découvrez le portfolio de Jude ONDOUNGA-LEKOU, étudiant en BTS SIO option SISR : parcours, compétences en systèmes et réseaux, projets, certifications et veille technologique.">
+    <meta name="author" content="Jude ONDOUNGA-LEKOU">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d1b2a">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Jude ONDOUNGA-LEKOU | Portfolio BTS SIO SISR">
+    <meta property="og:description" content="Parcours, compétences, projets et certifications en systèmes, réseaux et cybersécurité.">
+    <meta name="twitter:card" content="summary">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Jude ONDOUNGA-LEKOU",
+            "description": "Étudiant en BTS Services informatiques aux organisations, option Solutions d’infrastructure, systèmes et réseaux (SISR).",
+            "affiliation": {
+                "@type": "EducationalOrganization",
+                "name": "Institut F2I"
+            },
+            "knowsAbout": ["Administration systèmes", "Réseaux informatiques", "Cybersécurité", "BTS SIO SISR"]
+        }
+        </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="index-page.js" defer></script>
+    <script src="language.js" defer></script>
+    <script src="binary-rain.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body id="top">
+
+    <!-- Header: barre de navigation principale, fixe en haut -->
+    <header class="navbar">
+        <div class="logo-area">
+            <div class="avatar">
+                <img src="images/profil_jude2.png" alt="Jude ONDOUNGA-LEKOU">
+            </div>
+            <span class="bts-text">BTS SIO</span>
+        </div>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#top" class="active">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#entreprise">Entreprise</a></li>
+                <li><a href="#veille">Veille Technologique</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Épreuves <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="epreuve-e4.html">Épreuve E4</a>
+                        <a href="epreuve-e5.html">Épreuve E5</a>
+                        <a href="certifications.html">Certifications</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="projet.html" class="btn-projet">Projet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero: introduction avec animation binaire en arrière-plan -->
+    <section class="hero">
+        <canvas class="binary-rain" aria-hidden="true"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jude-ondounga-lekou/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <h1><span class="name">Jude</span><br> <span class="surname">ONDOUNGA - LEKOU</span></h1>
+                <p class="title-sisr">Solutions d'Infrastructure, Systèmes et Réseaux (SISR)</p>
+                <p class="promo">Étudiant en 2ème année BTS SIO — Promotion 2026 - 2027</p>
+                <a href="#a-propos" class="btn-welcome">Bienvenue</a>
+            </div>
+            <div class="hero-illustration">
+                <img class="hero-illustration-image" src="images/sisr-infrastructure.svg" alt="Illustration d’une infrastructure SISR reliant serveurs, équipements réseau, stockage et deux postes clients">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: À propos (ancre #a-propos) -->
+    <section id="a-propos" class="about-section">
+        <div class="about-container">
+            <div class="about-content-card">
+                <h2 class="about-title">À propos</h2>
+                <p class="about-intro">
+                    Bonjour, je m’appelle <span class="about-highlight">Jude Ondounga-Lekou</span> !
+                    Je suis passionné par l’informatique, les réseaux et la cybersécurité.
+                </p>
+                <p class="about-text">
+                    Actuellement étudiant en deuxième année de BTS SIO au sein de l’institut F2I, spécialisé  en SISR, avec un intérêt particulier pour la mise en place, la gestion et la sécurisation des infrastructures informatiques.
+                </p>
+                <p class="about-text">
+                    Mon objectif est de devenir administrateur système et réseau, capable d’assurer la performance, la fiabilité et la protection des systèmes d’information au quotidien.
+                </p>
+                <div class="about-actions">
+                    <a href="pdf/cv_17_f2i_jude_alternance_bts_systeme_&_reseau.pdf" target="_blank" rel="noopener" class="about-btn about-btn-primary">
+                        <i class="fas fa-file-pdf"></i> Consulter CV
+                    </a>
+                    <a href="pdf/lettre_de_motivation_jude_ondounga-lekou.pdf" target="_blank" rel="noopener" class="about-btn about-btn-outline">
+                        <i class="fas fa-envelope-open-text"></i> Lettre de Motivation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Spécialisation (SISR vs SLAM) -->
+    <section class="specialization-section">
+        <div class="specialization-container">
+            <h2 class="specialization-title">Ma spécialisation</h2>
+            <p class="specialization-intro">Je me dirige vers la spécialité <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux). Ci-dessous, je compare rapidement cette option à SLAM.</p>
+            <div class="specialization-grid">
+                <article class="specialization-card specialization-card-slam">
+                    <span class="specialization-tag">SLAM</span>
+                    <h3>Développement et logiciels</h3>
+                    <p>SLAM forme aux solutions logicielles et aux applications métiers : développement web, mobile, bases de données, et maintenance des programmes.</p>
+                </article>
+                <article class="specialization-card specialization-card-sisr specialization-card-active">
+                    <div class="specialization-badge">Mon choix</div>
+                    <span class="specialization-tag">SISR</span>
+                    <h3>Infrastructure et réseau</h3>
+                    <p>SISR forme aux infrastructures, aux systèmes, aux réseaux et à la cybersécurité : installation, administration, sécurité et supervision des parcs informatiques.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section: Parcours scolaire (ancre #parcours) -->
+    <section id="parcours" class="parcours-section">
+
+        <div class="parcours-container">
+            <div class="parcours-header">
+                <h2 class="parcours-title">Parcours scolaire</h2>
+                <p class="parcours-subtitle">Une progression claire, étape par étape, depuis le lycée jusqu’au BTS.</p>
+            </div>
+
+            <div class="parcours-tree">
+                <div class="parcours-node parcours-node-main">
+                    <span class="parcours-year">2026 – 2027</span>
+                    <h3>BTS 2 – Services Informatiques aux Organisations</h3>
+                    <p>Institut F2I – Vincennes</p>
+                </div>
+
+                <div class="parcours-branch"></div>
+
+                <div class="parcours-card parcours-card-stage">
+                    <div class="parcours-badge">Stage</div>
+                    <h4>Stage Gestion IT – NATASSUR</h4>
+                    <p><strong>13 mai – 26 juin 2026</strong><br>94200 Ivry-sur-Seine</p>
+                    <ul>
+                        <li>Évolution et déploiement de modules CRM sur Dolibarr</li>
+                        <li>Automatisation de la GED vers OneDrive</li>
+                        <li>Configuration de Syncthing pour la remontée des appels</li>
+                        <li>Support utilisateurs et accueil téléphonique</li>
+                    </ul>
+                    <a class="project-download stage-report-download" href="pdf/rapport_de_fin_de_stage_bts1.pdf" download>
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger le rapport de stage (PDF)
+                    </a>
+                </div>
+
+                <div class="parcours-node">
+                    <span class="parcours-year">2025 – 2026</span>
+                    <h3>BTS 1 – Services Informatiques aux Organisations</h3>
+                    <p>Institut F2I – Vincennes</p>
+                </div>
+
+                <div class="parcours-node">
+                    <span class="parcours-year">2024 – 2025</span>
+                    <h3>Licence 1 – Réseaux et Télécommunications</h3>
+                    <p>I.A.E – Brazzaville</p>
+                </div>
+
+                <div class="parcours-node parcours-node-last">
+                    <span class="parcours-year">2022 – 2023</span>
+                    <h3>BAC série D – Option Mathématiques</h3>
+                    <p>La Réconciliation – Brazzaville</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Section: Compétences & Outils (ancre #competences) -->
+    <section id="competences" class="competences-section">
+        <div class="competences-container">
+            <div class="competences-header">
+                <h2 class="competences-title">Compétences & Outils</h2>
+                <p class="competences-subtitle">Découvrez l'ensemble des technologies, outils et logiciels que je maîtrise en infrastructure, systèmes et réseaux.</p>
+            </div>
+
+            <div class="competences-grid">
+                <!-- Systèmes d'exploitation -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Systèmes d'exploitation</h3>
+                    <p>Windows 10/11, Windows Server, Linux (Debian, Ubuntu, Kali).</p>
+                </div>
+
+                <!-- Virtualisation -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Virtualisation</h3>
+                    <p>Oracle VM VirtualBox, VMware Workstation, Proxmox, Hyper-V.</p>
+                </div>
+
+                <!-- Gestion de projet -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestion de Projet & Ticketting</h3>
+                    <p>GLPI : gestion de parc informatique et tickets d'incidents.</p>
+                </div>
+
+                <!-- Bases de données -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Bases de Données</h3>
+                    <p>MySQL, MariaDB, SQLite, phpMyAdmin, DB Browser.</p>
+                </div>
+
+                <!-- Développement Web -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <p>PHP 8, HTML5, CSS3, Visual Studio Code.</p>
+                </div>
+
+                <!-- Serveurs locaux -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Serveurs Web locaux</h3>
+                    <p>XAMPP, MAMP pour développement et test d'applications.</p>
+                </div>
+
+                <!-- Simulation réseau -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Simulation Réseau</h3>
+                    <p>Cisco Packet Tracer pour la modélisation de topologies.</p>
+                </div>
+
+                <!-- Analyse & Sécurité -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Analyse & Sécurité</h3>
+                    <p>Wireshark, Nmap, PuTTY (SSH/Telnet), Kali Linux.</p>
+                </div>
+
+                <!-- Services réseau -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Services Réseau</h3>
+                    <p>Active Directory, OpenLDAP, DNS, DHCP, Syncthing.</p>
+                </div>
+
+                <!-- Supervision & Pare-feu -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Supervision & Pare-feu</h3>
+                    <p>Zabbix pour la supervision, pfSense pour le pare-feu.</p>
+                </div>
+
+                <!-- Conception & Modélisation -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Conception & Modélisation</h3>
+                    <p>Looping pour la modélisation et la conception de systèmes.</p>
+                </div>
+
+                <!-- Outils bureautiques & Design -->
+                <div class="competence-card">
+                    <div class="competence-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Bureautique & Design</h3>
+                    <p>Microsoft Office (Word, Excel, PowerPoint), Adobe (Photoshop, Illustrator).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section id="entreprise" class="entreprise-section">
+        <div class="entreprise-container">
+            <header class="entreprise-heading">
+                <h2>Entreprise d’accueil</h2>
+                <p>Présentation des entreprises et stages réalisés durant ma formation BTS SIO.</p>
+            </header>
+
+            <article class="company-profile" aria-labelledby="company-name">
+                <div class="company-banner">
+                    <img class="company-banner-image" src="images/banni%C3%A8re_natassur.webp" alt="Bannière de l’agence NATASSUR à Ivry-sur-Seine">
+                </div>
+
+                <div class="company-profile-content">
+                    <div class="company-identity">
+                        <img class="company-logo" src="images/natassur-logo.png" alt="Logo NATASSUR">
+                        <div>
+                            <h3 id="company-name">NATASSUR</h3>
+                            <p class="company-tagline">Courtier en assurances pour particuliers et professionnels</p>
+                        </div>
+                    </div>
+
+                    <p class="company-description">
+                        NATASSUR accompagne les particuliers et les professionnels dans la recherche d’une assurance adaptée à leur situation. Le cabinet compare des offres aux garanties comparables et conseille ses clients dans leurs choix. Son agence est située à Ivry-sur-Seine et ses conseillers accompagnent également leurs clients par téléphone partout en France.
+                    </p>
+
+                    <div class="company-info-grid">
+                        <div class="company-info-item">
+                            <span class="company-info-label"><i class="fas fa-location-dot" aria-hidden="true"></i> Agence</span>
+                            <strong class="company-info-value">43 bis Promenée Marat, 94200 Ivry-sur-Seine</strong>
+                        </div>
+                        <div class="company-info-item">
+                            <span class="company-info-label"><i class="fas fa-map" aria-hidden="true"></i> Zone d’intervention</span>
+                            <strong class="company-info-value">Partout en France</strong>
+                        </div>
+                        <div class="company-info-item">
+                            <span class="company-info-label"><i class="fas fa-id-card" aria-hidden="true"></i> Courtier ORIAS</span>
+                            <strong class="company-info-value">N° 24007656</strong>
+                        </div>
+                        <div class="company-info-item">
+                            <span class="company-info-label"><i class="fas fa-calendar-check" aria-hidden="true"></i> Période de stage</span>
+                            <strong class="company-info-value">13 mai – 26 juin 2026</strong>
+                        </div>
+                        <div class="company-info-item">
+                            <span class="company-info-label"><i class="fas fa-phone" aria-hidden="true"></i> Téléphone</span>
+                            <strong class="company-info-value"><a href="tel:+33605111999">06 05 111 999</a></strong>
+                        </div>
+                        <div class="company-info-item">
+                            <span class="company-info-label"><i class="fas fa-globe" aria-hidden="true"></i> Site web</span>
+                            <strong class="company-info-value"><a href="https://natassur.fr/" target="_blank" rel="noopener noreferrer">natassur.fr <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></strong>
+                        </div>
+                    </div>
+
+                    <div class="company-specialties">
+                        <h4>Spécialisations</h4>
+                        <div class="company-tags">
+                            <span>Automobile</span>
+                            <span>Mobilité professionnelle (VTC, taxis, flottes)</span>
+                            <span>Bâtiment et décennale</span>
+                            <span>Assurances professionnelles</span>
+                            <span>Santé et mutuelles</span>
+                            <span>Habitation</span>
+                            <span>Prévoyance</span>
+                            <span>Carte grise</span>
+                        </div>
+                    </div>
+
+                    <div class="company-missions">
+                        <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Mes missions — Stage Gestion IT</h4>
+                        <ul>
+                            <li>Évolution et déploiement de modules CRM sur Dolibarr</li>
+                            <li>Automatisation de la GED vers OneDrive</li>
+                            <li>Configuration de Syncthing pour la remontée des appels</li>
+                            <li>Support utilisateurs et accueil téléphonique</li>
+                        </ul>
+                    </div>
+
+                    <div class="company-actions">
+                        <a class="company-action-link" href="pdf/rapport_de_fin_de_stage_bts1.pdf" download>
+                            <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Télécharger le rapport de stage
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section: Veille technologique (ancre #veille) - accordéon interactif -->
+    <section id="veille" class="veille-section">
+        <div class="veille-container">
+            <h2 class="veille-title">Veille Technologique</h2>
+            <p class="veille-subtitle">Questions fréquentes et points de veille. (Contenu en cours d'ajout)</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <div class="q"><i class="fas fa-question-circle"></i> <span>Qu'est-ce que la veille technologique ?</span></div>
+                        <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>La veille technologique consiste à surveiller l'évolution des outils, des standards et des pratiques pour rester à jour.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <div class="q"><i class="fas fa-question-circle"></i> <span>Quel est le but d'une veille technologique ?</span></div>
+                        <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Identifier des tendances, anticiper les risques et améliorer les pratiques professionnelles.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <div class="q"><i class="fas fa-question-circle"></i> <span>Quels sont les outils de veille ?</span></div>
+                        <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Flux RSS, alertes Google, plateformes spécialisées, lectures techniques et tests pratiques.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <div class="q"><i class="fas fa-question-circle"></i> <span>Quelle a été le sujet de ma veille ?</span></div>
+                        <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Contenu à venir — je documenterai ici mes recherches et conclusions.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <div class="q"><i class="fas fa-question-circle"></i> <span>Quelles thématiques sont abordées ?</span></div>
+                        <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Sécurité, réseaux, virtualisation, bonnes pratiques d'administration et nouveautés cloud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact (ancre #contact) -->
+    <section id="contact" class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-intro">
+                <span class="section-label">Contact</span>
+                <h2>Restons en contact</h2>
+                <p>Pour toute question, projet ou opportunité, envoyez-moi un message ou utilisez mes coordonnées directes.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card contact-card-primary">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Adresse mail</h3>
+                    <p><a href="mailto:j.ondounga.it@gmail.com">j.ondounga.it@gmail.com</a></p>
+                </div>
+
+                <div class="contact-card contact-card-secondary">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:+33759842085">+33 7 59 84 20 85</a></p>
+                </div>
+
+                <div class="contact-card contact-card-tertiary">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Localisation</h3>
+                    <p>91940 Les Ulis, France</p>
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <div class="contact-form-card">
+                    <h3>Écrivez-moi un message</h3>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <input id="contact-name" type="text" placeholder="Votre nom" aria-label="Votre nom" required>
+                            <input id="contact-email" type="email" placeholder="Votre mail" aria-label="Votre mail" required>
+                        </div>
+                        <div class="form-row">
+                            <input id="contact-subject" type="text" placeholder="Sujet" aria-label="Sujet" required>
+                        </div>
+                        <div class="form-row">
+                            <textarea id="contact-message" rows="5" placeholder="Votre message" aria-label="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <aside class="contact-location-card">
+                    <div class="location-panel-top">
+                        <div class="location-marker"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="location-label">Mon adresse</p>
+                            <p class="location-address">91940 Les Ulis, France</p>
+                        </div>
+                    </div>
+                    <div class="location-map-preview">
+                        <iframe
+                            src="https://maps.google.com/maps?q=17%20Av.%20de%20l'Atlantique,%2091940%20Les%20Ulis,%20France&output=embed"
+                            title="Carte de localisation à Les Ulis"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer"
+                        ></iframe>
+                    </div>
+                    <div class="location-note">
+                        <p>Voir l'emplacement exact sur Google Maps pour me localiser rapidement.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer du site -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo"><i class="fas fa-shield-alt"></i></div>
+                <h3>Jude ONDOUNGA-LEKOU</h3>
+                <p>Portfolio BTS SIO - Spécialisation SISR et cybersécurité.</p>
+            </div>
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <h4>Navigation rapide</h4>
+                    <a href="#top">Accueil</a>
+                    <a href="#a-propos">À propos</a>
+                    <a href="#parcours">Parcours</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#entreprise">Entreprise</a>
+                    <a href="#veille">Veille</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-contact-card">
+                    <h4>Contact</h4>
+                    <p><strong>Email :</strong> <a href="mailto:j.ondounga.it@gmail.com">j.ondounga.it@gmail.com</a></p>
+                    <p><strong>Adresse :</strong> 1940 Les Ulis</p>
+                    <p><strong>Téléphone :</strong> +33 6 64 69 01 19</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Jude ONDOUNGA-LEKOU. Tous droits réservés.</p>
+            <div class="footer-actions">
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/jude-ondounga-lekou/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="#top" class="back-to-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>

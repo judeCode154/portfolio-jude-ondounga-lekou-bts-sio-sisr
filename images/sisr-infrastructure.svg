@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" fill="none">
+  <defs>
+    <linearGradient id="rack-front" x1="386" y1="172" x2="619" y2="561" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173E65"/>
+      <stop offset=".52" stop-color="#0D2848"/>
+      <stop offset="1" stop-color="#08172C"/>
+    </linearGradient>
+    <linearGradient id="rack-side" x1="620" y1="195" x2="689" y2="542" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B456C"/>
+      <stop offset="1" stop-color="#09182E"/>
+    </linearGradient>
+    <linearGradient id="device-face" x1="93" y1="231" x2="310" y2="318" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173D61"/>
+      <stop offset="1" stop-color="#0A1B33"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="700" y1="143" x2="918" y2="304" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16395C"/>
+      <stop offset="1" stop-color="#0A1A30"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="95" y1="160" x2="830" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57E9F7"/>
+      <stop offset=".55" stop-color="#12CDEB"/>
+      <stop offset="1" stop-color="#5D9CFF"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0" cy="0" r="1" gradientTransform="matrix(0 260 -405 0 507 354)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00DDF5" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#00DDF5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="48" y="108" width="912" height="540" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="13" result="blur"/>
+      <feOffset dy="13" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0 0 0 0 0 0.03 0 0 0 0 0.08 0 0 0 .58 0" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="cyan-glow" x="40" y="100" width="920" height="540" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <style>
+    @keyframes data-flow { to { stroke-dashoffset: -30; } }
+    @keyframes signal-pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+    @keyframes client-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .network-flow { stroke-dasharray: 6 9; animation: data-flow 1.6s linear infinite; }
+    .network-pulse, .wifi-flow { animation: signal-pulse 2s ease-in-out infinite; }
+    .client-float { animation: client-float 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .network-flow, .network-pulse, .wifi-flow, .client-float { animation: none !important; }
+    }
+  </style>
+
+  <ellipse cx="507" cy="364" rx="405" ry="260" fill="url(#ambient)"/>
+  <g stroke="#38D9EF" stroke-linecap="round">
+    <path d="M91 576h817M117 590h762" stroke-opacity=".13"/>
+    <path class="network-flow" d="M308 269h32v12h41" stroke-opacity=".9" stroke-width="3"/>
+    <path class="network-flow" d="M308 366h37v-16h36" stroke-opacity=".9" stroke-width="3"/>
+    <path class="network-flow" d="M276 470h56v-35h49" stroke-opacity=".9" stroke-width="3"/>
+    <path class="network-flow" d="M224 554h113v-70h44" stroke-opacity=".9" stroke-width="3"/>
+    <path class="network-flow" d="M686 238h10v-28h9" stroke-opacity=".9" stroke-width="3"/>
+    <path class="network-flow" d="M686 412h12v-21h12" stroke-opacity=".9" stroke-width="3"/>
+    <path class="network-flow" d="M686 497h13v58h15" stroke-opacity=".9" stroke-width="3"/>
+  </g>
+  <g class="network-pulse" fill="#4DE7F4">
+    <circle cx="308" cy="269" r="4"/><circle cx="381" cy="281" r="4"/>
+    <circle cx="308" cy="366" r="4"/><circle cx="381" cy="350" r="4"/>
+    <circle cx="276" cy="470" r="4"/><circle cx="381" cy="435" r="4"/>
+    <circle cx="224" cy="554" r="4"/><circle cx="381" cy="484" r="4"/>
+    <circle cx="686" cy="238" r="4"/><circle cx="705" cy="210" r="4"/>
+    <circle cx="686" cy="412" r="4"/><circle cx="710" cy="391" r="4"/>
+    <circle cx="686" cy="497" r="4"/><circle cx="714" cy="555" r="4"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <path d="m381 193 55-31h250l-66 37-239-6Z" fill="#1B4D72" stroke="#3DD8ED" stroke-opacity=".8" stroke-width="2"/>
+    <path d="m620 199 66-37v352l-66 42V199Z" fill="url(#rack-side)" stroke="#2DA9CE" stroke-opacity=".72" stroke-width="2"/>
+    <rect x="381" y="193" width="239" height="363" rx="9" fill="url(#rack-front)" stroke="url(#edge)" stroke-width="2.5"/>
+    <rect x="395" y="207" width="211" height="34" rx="4" fill="#0A1B31" stroke="#276A92"/>
+    <circle class="network-pulse" cx="412" cy="224" r="4" fill="#44E3F4"/>
+    <text x="426" y="229" fill="#BCECF4" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">RACK SERVEURS</text>
+    <text x="570" y="229" fill="#6C9FBE" font-family="Arial, sans-serif" font-size="9" text-anchor="end">SISR · 01</text>
+
+    <g>
+      <rect x="396" y="253" width="209" height="61" rx="5" fill="#102B49" stroke="#357BA2"/>
+      <rect x="405" y="263" width="57" height="40" rx="3" fill="#09192D" stroke="#245B7B"/>
+      <path d="M414 275h39m-39 7h30m-30 7h35" stroke="#45D8EE" stroke-linecap="round" stroke-width="2"/>
+      <text x="473" y="277" fill="#E5F8FC" font-family="Arial, sans-serif" font-size="12" font-weight="700">WINDOWS SERVER</text>
+      <text x="473" y="294" fill="#80AFC5" font-family="Arial, sans-serif" font-size="10">AD · DNS · DHCP</text>
+      <circle class="network-pulse" cx="584" cy="270" r="3" fill="#38E6B0"/><circle class="network-pulse" cx="584" cy="283" r="3" fill="#38E6B0"/>
+      <path d="M596 268v31" stroke="#2D607D" stroke-width="3"/>
+    </g>
+
+    <g>
+      <rect x="396" y="322" width="209" height="61" rx="5" fill="#102B49" stroke="#357BA2"/>
+      <rect x="405" y="332" width="57" height="40" rx="3" fill="#09192D" stroke="#245B7B"/>
+      <path d="M414 344h39m-39 7h32m-32 7h37" stroke="#48B8FF" stroke-linecap="round" stroke-width="2"/>
+      <text x="473" y="346" fill="#E5F8FC" font-family="Arial, sans-serif" font-size="12" font-weight="700">LINUX SERVER</text>
+      <text x="473" y="363" fill="#80AFC5" font-family="Arial, sans-serif" font-size="10">DEBIAN · UBUNTU</text>
+      <circle class="network-pulse" cx="584" cy="339" r="3" fill="#38E6B0"/><circle class="network-pulse" cx="584" cy="352" r="3" fill="#38E6B0"/>
+      <path d="M596 337v31" stroke="#2D607D" stroke-width="3"/>
+    </g>
+
+    <g>
+      <rect x="396" y="391" width="209" height="61" rx="5" fill="#102B49" stroke="#357BA2"/>
+      <rect x="405" y="401" width="57" height="40" rx="3" fill="#09192D" stroke="#245B7B"/>
+      <path d="M414 413h39m-39 7h29m-29 7h35" stroke="#B38AFF" stroke-linecap="round" stroke-width="2"/>
+      <text x="473" y="415" fill="#E5F8FC" font-family="Arial, sans-serif" font-size="12" font-weight="700">HYPERVISEUR</text>
+      <text x="473" y="432" fill="#80AFC5" font-family="Arial, sans-serif" font-size="10">VM · CONTENEURS</text>
+      <circle class="network-pulse" cx="584" cy="408" r="3" fill="#38E6B0"/><circle class="network-pulse" cx="584" cy="421" r="3" fill="#38E6B0"/>
+      <path d="M596 406v31" stroke="#2D607D" stroke-width="3"/>
+    </g>
+
+    <g>
+      <rect x="396" y="460" width="209" height="77" rx="5" fill="#102B49" stroke="#357BA2"/>
+      <text x="408" y="478" fill="#9BC7D9" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing=".8">SUPERVISION &amp; STOCKAGE</text>
+      <path d="M409 490h182m-182 13h182m-182 13h182" stroke="#255474" stroke-width="1"/>
+      <g class="network-pulse" fill="#40DDB6">
+        <circle cx="421" cy="496" r="2"/><circle cx="421" cy="509" r="2"/><circle cx="421" cy="522" r="2"/>
+      </g>
+      <g class="network-pulse" fill="#4CE3F4">
+        <rect x="563" y="490" width="5" height="5" rx="1"/><rect x="574" y="490" width="5" height="5" rx="1"/>
+        <rect x="563" y="503" width="5" height="5" rx="1"/><rect x="574" y="503" width="5" height="5" rx="1"/>
+      </g>
+    </g>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="77" y="218" width="231" height="91" rx="10" fill="url(#device-face)" stroke="#4DE4F3" stroke-width="2"/>
+    <rect x="91" y="232" width="203" height="62" rx="6" fill="#09192E" stroke="#245E81"/>
+    <text x="106" y="250" fill="#E2F8FC" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".8">SWITCH RÉSEAU</text>
+    <g fill="#41D9ED">
+      <rect x="107" y="264" width="10" height="13" rx="2"/><rect x="122" y="264" width="10" height="13" rx="2"/>
+      <rect x="137" y="264" width="10" height="13" rx="2"/><rect x="152" y="264" width="10" height="13" rx="2"/>
+      <rect x="167" y="264" width="10" height="13" rx="2"/><rect x="182" y="264" width="10" height="13" rx="2"/>
+      <rect x="197" y="264" width="10" height="13" rx="2"/><rect x="212" y="264" width="10" height="13" rx="2"/>
+      <rect x="227" y="264" width="10" height="13" rx="2"/><rect x="242" y="264" width="10" height="13" rx="2"/>
+      <rect x="257" y="264" width="10" height="13" rx="2"/>
+    </g>
+    <circle class="network-pulse" cx="278" cy="243" r="3" fill="#42E8B4"/>
+
+    <rect x="77" y="329" width="231" height="76" rx="10" fill="url(#device-face)" stroke="#348DB6" stroke-width="2"/>
+    <rect x="91" y="342" width="203" height="49" rx="6" fill="#09192E" stroke="#245E81"/>
+    <text x="105" y="361" fill="#E2F8FC" font-family="Arial, sans-serif" font-size="11" font-weight="700">ROUTEUR &amp; PARE-FEU</text>
+    <path d="M105 374h115" stroke="#38617E" stroke-width="2"/>
+    <g class="network-pulse" fill="#49DFF0"><circle cx="246" cy="371" r="3"/><circle cx="258" cy="371" r="3"/><circle cx="270" cy="371" r="3"/></g>
+    <path d="M231 348v34" stroke="#244C6A" stroke-width="1.5"/>
+    <text x="105" y="386" fill="#82B3C9" font-family="Arial, sans-serif" font-size="9">WAN</text>
+    <text x="144" y="386" fill="#82B3C9" font-family="Arial, sans-serif" font-size="9">LAN</text>
+  </g>
+
+  <g>
+    <rect x="112" y="444" width="164" height="53" rx="26" fill="#112D4A" stroke="#39D8ED" stroke-width="2"/>
+    <path d="M141 469c0-15 12-27 27-27s27 12 27 27m-42 0c0-8 7-15 15-15s15 7 15 15m-22 0a7 7 0 1 1 14 0" stroke="#61E7F5" stroke-linecap="round" stroke-width="2.5"/>
+    <text x="210" y="466" fill="#E2F8FC" font-family="Arial, sans-serif" font-size="11" font-weight="700">POINT D’ACCÈS</text>
+    <text x="210" y="482" fill="#82B3C9" font-family="Arial, sans-serif" font-size="9">WI-FI PROFESSIONNEL</text>
+    <path class="wifi-flow" d="M168 433c0-20 16-36 36-36m-36 36c0-31 25-56 56-56" stroke="#46DDF1" stroke-linecap="round" stroke-opacity=".6" stroke-width="2"/>
+  </g>
+
+  <g class="client-float" filter="url(#soft-shadow)">
+    <path d="M84 520h132a8 8 0 0 1 8 8v70H76v-70a8 8 0 0 1 8-8Z" fill="#102B49" stroke="#42D9EE" stroke-width="2"/>
+    <rect x="88" y="532" width="120" height="54" rx="4" fill="#08182D" stroke="#2B83A7"/>
+    <path d="m99 546 30 0m-30 8h88m-88 8h61" stroke="#45CBE5" stroke-linecap="round" stroke-width="2"/>
+    <circle cx="148" cy="578" r="2" fill="#49E1B7"/>
+    <path d="M140 598v9m-31 0h62m-112 13h178l-17 16H76l-17-16Z" fill="#14395A" stroke="#46D9EC" stroke-width="2"/>
+    <path d="m81 621 135 0" stroke="#2D7194" stroke-width="1.5"/>
+    <text x="95" y="649" fill="#BCECF4" font-family="Arial, sans-serif" font-size="10" font-weight="700">POSTE CLIENT 02</text>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="705" y="135" width="222" height="150" rx="12" fill="url(#panel)" stroke="#45DFF1" stroke-width="2"/>
+    <path d="M705 171h222" stroke="#2D779E"/>
+    <circle cx="725" cy="153" r="4" fill="#40E0B8"/>
+    <text x="738" y="158" fill="#DDF8FC" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".8">VIRTUALISATION</text>
+    <g>
+      <rect x="722" y="185" width="188" height="27" rx="5" fill="#0A1B31" stroke="#265B7C"/>
+      <rect x="731" y="192" width="13" height="13" rx="3" fill="#39DFF0"/>
+      <text x="752" y="203" fill="#C9EAF2" font-family="Arial, sans-serif" font-size="11">Proxmox VE</text>
+      <rect x="722" y="219" width="188" height="27" rx="5" fill="#0A1B31" stroke="#265B7C"/>
+      <rect x="731" y="226" width="13" height="13" rx="3" fill="#729AFF"/>
+      <text x="752" y="237" fill="#C9EAF2" font-family="Arial, sans-serif" font-size="11">VMware ESXi · Hyper-V</text>
+      <path d="M731 260h76m12 0h25" stroke="#326B8B" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="710" y="337" width="210" height="111" rx="12" fill="url(#panel)" stroke="#438DB6" stroke-width="2"/>
+    <text x="729" y="360" fill="#DDF8FC" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".8">STOCKAGE RÉSEAU</text>
+    <g>
+      <rect x="730" y="373" width="78" height="58" rx="7" fill="#09192E" stroke="#2B6C91"/>
+      <rect x="820" y="373" width="78" height="58" rx="7" fill="#09192E" stroke="#2B6C91"/>
+      <path d="M741 386h56m-56 13h56m-56 13h56m33-26h56m-56 13h56m-56 13h56" stroke="#255B7D" stroke-width="2"/>
+      <circle cx="750" cy="386" r="2" fill="#43E0B8"/><circle cx="829" cy="386" r="2" fill="#43E0B8"/>
+    </g>
+    <text x="730" y="442" fill="#82B3C9" font-family="Arial, sans-serif" font-size="9">NAS / SAN · SAUVEGARDES</text>
+  </g>
+
+  <g class="client-float" filter="url(#soft-shadow)">
+    <path d="m737 510 111-5 41 25v84l-151 5-24-24v-61l23-24Z" fill="#102B49" stroke="#42D9EE" stroke-width="2"/>
+    <path d="m737 510 25 22 127-2m-151 65 24-23 127-2" stroke="#2C82A7" stroke-width="1.5"/>
+    <rect x="763" y="530" width="99" height="54" rx="5" fill="#08182D" stroke="#49DCEF" stroke-width="2"/>
+    <path d="m773 542 34 0m-34 8h62m-62 8h45" stroke="#42BFE0" stroke-linecap="round" stroke-width="2"/>
+    <path d="M807 586v14m-25 0h50" stroke="#48CDE5" stroke-linecap="round" stroke-width="3"/>
+    <text x="748" y="618" fill="#BCECF4" font-family="Arial, sans-serif" font-size="10" font-weight="700">POSTE CLIENT 01</text>
+  </g>
+
+</svg>

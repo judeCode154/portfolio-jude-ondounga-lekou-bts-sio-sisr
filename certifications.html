@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+    File: certifications.html
+    Purpose: Page listant les certifications et attestations techniques.
+    Structure: header (nav) + main affichant badges/attestations.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+    <title>Certifications réseaux et cybersécurité | Jude ONDOUNGA-LEKOU</title>
+    <meta name="description" content="Certifications et attestations de Jude ONDOUNGA-LEKOU en BTS SIO SISR : réseaux, cybersécurité, systèmes et outils informatiques.">
+    <meta name="author" content="Jude ONDOUNGA-LEKOU">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d1b2a">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Certifications réseaux et cybersécurité | Jude ONDOUNGA-LEKOU">
+    <meta property="og:description" content="Attestations et certifications en réseaux, cybersécurité et systèmes informatiques.">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="nav.js" defer></script>
+    <script src="language.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    
+    <header class="navbar">
+        <div class="logo-area">
+            <div class="avatar"><img src="images/profil_jude2.png" alt="Jude"></div>
+            <span class="bts-text">BTS SIO</span>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="index.html#parcours">Parcours</a></li>
+                <li><a href="index.html#competences">Compétences</a></li>
+                <li><a href="index.html#entreprise">Entreprise</a></li>
+                <li><a href="index.html#veille">Veille Technologique</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn active">Épreuves <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="epreuve-e4.html">Épreuve E4</a>
+                        <a href="epreuve-e5.html">Épreuve E5</a>
+                        <a href="certifications.html">Certifications</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="projet.html" class="btn-projet">Projet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main: affichage des certifications et badges -->
+    <main class="page-container">
+        <h1 class="page-title">Mes Certifications</h1>
+        <p class="page-subtitle">Certifications obtenues dans le domaine des Réseaux et de la Cybersécurité.</p>
+        
+        <!-- Sections: certificats en ligne et en présentiel -->
+        <section class="card cert-section" aria-labelledby="online-title">
+            <h2 id="online-title">Certificats obtenus en ligne</h2>
+            <p class="subtle">Badges et attestations obtenus via des formations en ligne.</p>
+
+            <div class="cert-grid">
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-user-shield"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Introduction Cybersécurité</h3>
+                        <div class="cert-provider">Networking Academy</div>
+                        <div class="cert-desc">Fondamentaux de la cybersécurité : menaces, bonnes pratiques et défenses.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/Intro_cyber_Network_Academy.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-network-wired"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Introduction Cisco Packet Tracer</h3>
+                        <div class="cert-provider">Networking Academy</div>
+                        <div class="cert-desc">Utilisation de Packet Tracer pour concevoir et simuler des réseaux.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/Introduction_Cisco_Packet_Tracer_certificate.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Sécurité des Systèmes d'Information</h3>
+                        <div class="cert-provider">ANSSI - SecNumAcadémie</div>
+                        <div class="cert-desc">Principes et pratiques de sécurité pour protéger les systèmes d'information.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/sec_num_academie_jude_ondounga_lekou.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card cert-section" aria-labelledby="onsite-title">
+            <h2 id="onsite-title">Certificats obtenus en formation présentielle</h2>
+            <p class="subtle">Certificats délivrés par des centres de formation en présentiel.</p>
+
+            <div class="cert-grid">
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-hammer"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Maintenance Ordinateurs</h3>
+                        <div class="cert-provider">Centre MIKO</div>
+                        <div class="cert-desc">Réparation, diagnostic matériel et maintenance préventive des postes.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/certif-miko.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-video"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Montage Vidéo & Dév Web</h3>
+                        <div class="cert-provider">GOOD TECH</div>
+                        <div class="cert-desc">Montage vidéo et bases du développement web, workflows et outils.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/montage_Video_certif-goodtech.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-code"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Dev Web (GOOD TECH)</h3>
+                        <div class="cert-provider">GOOD TECH</div>
+                        <div class="cert-desc">Formation axée sur le développement web front-end et bonnes pratiques.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/dev_web_certif-goodtech.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-network-wired"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Réseau et Maintenance</h3>
+                        <div class="cert-provider">DIGI CONNECT</div>
+                        <div class="cert-desc">Installation et maintenance d'infrastructures réseau en entreprise.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/certif-digiconnect.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <div class="cert-logo"><i class="fas fa-clapperboard"></i></div>
+                    <div class="cert-meta">
+                        <h3 class="cert-title">Montage Vidéo & Dev Web (pack)</h3>
+                        <div class="cert-provider">GOOD TECH</div>
+                        <div class="cert-desc">Certificat combiné couvrant montage vidéo et développement web.</div>
+                        <div class="cert-actions">
+                            <a class="cert-link cert-btn" href="pdf/m_video_&_dev_web.pdf" target="_blank" rel="noopener">Aperçu PDF</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

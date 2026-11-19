@@ -800,7 +800,9 @@ body.nav-open::after {
 .project-image {
     display: block;
     width: calc(100% + 50px);
+    max-width: none;
     height: 180px;
+    flex: 0 0 180px;
     margin: -25px -25px 20px;
     object-fit: cover;
     object-position: center;

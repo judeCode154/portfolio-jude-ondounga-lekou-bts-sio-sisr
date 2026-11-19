@@ -3,9 +3,9 @@
 <!--
     File: index.html
     Purpose: Page d'accueil du portfolio de Jude ONDOUNGA-LEKOU.
-    Structure: Header (nav) → Hero → À propos → Spécialisation → Parcours → Compétences → Entreprise → Veille → Footer/Contact
+    Structure: Header (nav) → Hero → À propos → Spécialisation → Parcours → Compétences → Veille → Footer/Contact
     Notes:
-        - Ancres disponibles: #a-propos, #parcours, #competences, #entreprise, #veille, #contact
+        - Ancres disponibles: #a-propos, #parcours, #competences, #veille, #contact
         - Les styles sont dans `style.css` et les icônes utilisent Font Awesome.
 -->
 <head>
@@ -62,7 +62,6 @@
                 <li><a href="#a-propos">À propos</a></li>
                 <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#competences">Compétences</a></li>
-                <li><a href="#entreprise">Entreprise</a></li>
                 <li><a href="#veille">Veille Technologique</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Épreuves <i class="fas fa-caret-down"></i></a>
@@ -342,96 +341,10 @@
 
 
     
-    <section id="entreprise" class="entreprise-section">
-        <div class="entreprise-container">
-            <header class="entreprise-heading">
-                <h2>Entreprise d’accueil</h2>
-                <p>Présentation des entreprises et stages réalisés durant ma formation BTS SIO.</p>
-            </header>
-
-            <article class="company-profile" aria-labelledby="company-name">
-                <div class="company-banner">
-                    <img class="company-banner-image" src="images/banni%C3%A8re_natassur.webp" alt="Bannière de l’agence NATASSUR à Ivry-sur-Seine">
-                </div>
-
-                <div class="company-profile-content">
-                    <div class="company-identity">
-                        <img class="company-logo" src="images/natassur-logo.png" alt="Logo NATASSUR">
-                        <div>
-                            <h3 id="company-name">NATASSUR</h3>
-                            <p class="company-tagline">Courtier en assurances pour particuliers et professionnels</p>
-                        </div>
-                    </div>
-
-                    <p class="company-description">
-                        NATASSUR accompagne les particuliers et les professionnels dans la recherche d’une assurance adaptée à leur situation. Le cabinet compare des offres aux garanties comparables et conseille ses clients dans leurs choix. Son agence est située à Ivry-sur-Seine et ses conseillers accompagnent également leurs clients par téléphone partout en France.
-                    </p>
-
-                    <div class="company-info-grid">
-                        <div class="company-info-item">
-                            <span class="company-info-label"><i class="fas fa-location-dot" aria-hidden="true"></i> Agence</span>
-                            <strong class="company-info-value">43 bis Promenée Marat, 94200 Ivry-sur-Seine</strong>
-                        </div>
-                        <div class="company-info-item">
-                            <span class="company-info-label"><i class="fas fa-map" aria-hidden="true"></i> Zone d’intervention</span>
-                            <strong class="company-info-value">Partout en France</strong>
-                        </div>
-                        <div class="company-info-item">
-                            <span class="company-info-label"><i class="fas fa-id-card" aria-hidden="true"></i> Courtier ORIAS</span>
-                            <strong class="company-info-value">N° 24007656</strong>
-                        </div>
-                        <div class="company-info-item">
-                            <span class="company-info-label"><i class="fas fa-calendar-check" aria-hidden="true"></i> Période de stage</span>
-                            <strong class="company-info-value">13 mai – 26 juin 2026</strong>
-                        </div>
-                        <div class="company-info-item">
-                            <span class="company-info-label"><i class="fas fa-phone" aria-hidden="true"></i> Téléphone</span>
-                            <strong class="company-info-value"><a href="tel:+33605111999">06 05 111 999</a></strong>
-                        </div>
-                        <div class="company-info-item">
-                            <span class="company-info-label"><i class="fas fa-globe" aria-hidden="true"></i> Site web</span>
-                            <strong class="company-info-value"><a href="https://natassur.fr/" target="_blank" rel="noopener noreferrer">natassur.fr <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></strong>
-                        </div>
-                    </div>
-
-                    <div class="company-specialties">
-                        <h4>Spécialisations</h4>
-                        <div class="company-tags">
-                            <span>Automobile</span>
-                            <span>Mobilité professionnelle (VTC, taxis, flottes)</span>
-                            <span>Bâtiment et décennale</span>
-                            <span>Assurances professionnelles</span>
-                            <span>Santé et mutuelles</span>
-                            <span>Habitation</span>
-                            <span>Prévoyance</span>
-                            <span>Carte grise</span>
-                        </div>
-                    </div>
-
-                    <div class="company-missions">
-                        <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Mes missions — Stage Gestion IT</h4>
-                        <ul>
-                            <li>Évolution et déploiement de modules CRM sur Dolibarr</li>
-                            <li>Automatisation de la GED vers OneDrive</li>
-                            <li>Configuration de Syncthing pour la remontée des appels</li>
-                            <li>Support utilisateurs et accueil téléphonique</li>
-                        </ul>
-                    </div>
-
-                    <div class="company-actions">
-                        <a class="company-action-link" href="pdf/rapport_de_fin_de_stage_bts1.pdf" download>
-                            <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Télécharger le rapport de stage
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
     <!-- Section: Veille technologique (ancre #veille) - accordéon interactif -->
     <section id="veille" class="veille-section">
         <div class="veille-container">
-            <h2 class="veille-title">Veille Technologique de jude</h2>
+            <h2 class="veille-title">Veille Technologique</h2>
             <p class="veille-subtitle">Questions fréquentes et points de veille. (Contenu en cours d'ajout)</p>
 
             <div class="accordion">
@@ -573,7 +486,6 @@
                     <a href="#a-propos">À propos</a>
                     <a href="#parcours">Parcours</a>
                     <a href="#competences">Compétences</a>
-                    <a href="#entreprise">Entreprise</a>
                     <a href="#veille">Veille</a>
                     <a href="#contact">Contact</a>
                 </div>

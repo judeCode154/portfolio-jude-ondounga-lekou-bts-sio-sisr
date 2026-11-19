@@ -1862,15 +1862,15 @@ a.cert-link.cert-btn {
 
 @media (max-width: 600px) {
     .back-to-top {
-        right: 70px;
-        bottom: 22px;
+        right: 14px;
+        bottom: 142px;
     }
 }
 
 @media (max-width: 480px) {
     .back-to-top {
-        right: 62px;
-        bottom: 14px;
+        right: 14px;
+        bottom: 142px;
     }
 }
 
@@ -1984,7 +1984,7 @@ body[data-theme="light"] .language-option[aria-pressed="true"] {
 }
 
 @media (max-width: 480px) {
-    .language-switcher { right: 14px; bottom: 70px; }
+    .language-switcher { right: 14px; bottom: 82px; }
 }
 
 /* Palette claire */
@@ -2989,7 +2989,7 @@ img, iframe, video, svg, canvas {
 
     .back-to-top {
         right: 14px;
-        bottom: 14px;
+        bottom: 142px;
     }
 }
 

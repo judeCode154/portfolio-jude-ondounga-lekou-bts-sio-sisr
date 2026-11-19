@@ -1863,14 +1863,14 @@ a.cert-link.cert-btn {
 @media (max-width: 600px) {
     .back-to-top {
         right: 14px;
-        bottom: 142px;
+        bottom: 114px;
     }
 }
 
 @media (max-width: 480px) {
     .back-to-top {
         right: 14px;
-        bottom: 142px;
+        bottom: 114px;
     }
 }
 
@@ -1984,7 +1984,7 @@ body[data-theme="light"] .language-option[aria-pressed="true"] {
 }
 
 @media (max-width: 480px) {
-    .language-switcher { right: 14px; bottom: 82px; }
+    .language-switcher { right: 14px; bottom: 64px; }
 }
 
 /* Palette claire */
@@ -2989,7 +2989,7 @@ img, iframe, video, svg, canvas {
 
     .back-to-top {
         right: 14px;
-        bottom: 142px;
+        bottom: 114px;
     }
 }
 
@@ -3020,5 +3020,35 @@ img, iframe, video, svg, canvas {
     .footer-contact-card {
         padding-left: 14px;
         padding-right: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle,
+    .language-switcher,
+    .back-to-top {
+        right: calc(14px + env(safe-area-inset-right, 0px));
+        width: 44px;
+        height: 44px;
+        box-sizing: border-box;
+    }
+
+    .theme-toggle {
+        bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .language-switcher {
+        bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .language-toggle {
+        width: 44px;
+        height: 44px;
+        min-height: 44px;
+        box-sizing: border-box;
+    }
+
+    .back-to-top {
+        bottom: calc(110px + env(safe-area-inset-bottom, 0px));
     }
 }

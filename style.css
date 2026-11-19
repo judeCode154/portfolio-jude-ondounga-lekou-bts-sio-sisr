@@ -887,7 +887,7 @@ section {
 .about-section {
     background: linear-gradient(135deg, #07101d 0%, #0f1f35 100%);
     color: #f5f7ff;
-    padding: 100px 20px;
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
 }
@@ -989,7 +989,7 @@ section {
 /* Parcours scolaire en arbre */
 .parcours-section {
     background: linear-gradient(135deg, #05111f 0%, #0d1b2a 100%);
-    padding: 100px 20px 120px;
+    padding: 60px 20px 70px;
     color: #f5f7ff;
 }
 
@@ -1147,7 +1147,7 @@ section {
 /* Section Compétences */
 .competences-section {
     background: linear-gradient(180deg, #04111c 0%, #07101d 100%);
-    padding: 100px 20px 120px;
+    padding: 60px 20px 70px;
     color: #f5f7ff;
 }
 
@@ -1350,7 +1350,7 @@ a.cert-link.cert-btn {
 .specialization-section {
     background: #07101d;
     color: #f5f7ff;
-    padding: 90px 20px 120px;
+    padding: 55px 20px 65px;
 }
 
 .specialization-container {
@@ -1450,7 +1450,7 @@ a.cert-link.cert-btn {
 /* Veille technologique - Accordéon */
 .veille-section {
     background:  linear-gradient(135deg, #07101d 0%, #0f1f35 100%);
-    padding: 80px 20px 120px;
+    padding: 55px 20px 70px;
     color: #eaf6ff;
 }
 .veille-container {
@@ -1505,7 +1505,7 @@ a.cert-link.cert-btn {
 /* Contact section */
 .contact-section {
     background: linear-gradient(180deg, #020814 0%, #07111c 100%);
-    padding: 100px 20px 120px;
+    padding: 60px 20px 70px;
     color: #f5f7ff;
 }
 .contact-wrapper {

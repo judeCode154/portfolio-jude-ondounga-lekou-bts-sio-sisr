@@ -4,7 +4,7 @@
     if (!button || !nav) return;
 
     const icon = button.querySelector('i');
-    const mobileQuery = window.matchMedia('(max-width: 900px)');
+    const mobileQuery = window.matchMedia('(max-width: 1050px)');
 
     function setMenuOpen(open) {
         document.body.classList.toggle('nav-open', open);

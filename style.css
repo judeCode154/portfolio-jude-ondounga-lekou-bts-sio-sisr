@@ -228,7 +228,7 @@ ul {
 }
 
 /* Responsive navbar: mobile behavior */
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
     .navbar { padding: 12px 20px; }
     .nav-links { display: none; }
     .nav-toggle { display: inline-flex; position: relative; flex: 0 0 auto; z-index: 1300; border-radius: 12px; }
@@ -249,11 +249,11 @@ ul {
     .nav-links a { padding: 8px 10px; display: block; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
     body.nav-open .navbar { z-index: 1200; }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1051px) {
     .nav-toggle { display: none !important; }
     .nav-links { display: block !important; }
     .nav-links ul { display: flex !important; flex-direction: row !important; gap: 20px !important; }
@@ -2605,5 +2605,420 @@ body[data-theme="light"] .e5-overview p {
         animation: none;
         transform: none;
         will-change: auto;
+    }
+}
+
+/* Responsive global: mobiles, tablettes, petits écrans et écrans larges */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, iframe, video, svg, canvas {
+    max-width: 100%;
+}
+
+.navbar {
+    min-height: 72px;
+    padding-top: env(safe-area-inset-top);
+}
+
+.nav-links,
+.nav-links ul {
+    min-width: 0;
+}
+
+.nav-links a {
+    white-space: nowrap;
+}
+
+@media (max-width: 1200px) and (min-width: 1051px) {
+    .navbar {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .nav-links ul {
+        gap: 10px !important;
+    }
+
+    .nav-links a:not(.btn-projet) {
+        font-size: 0.78rem;
+    }
+
+    .btn-projet {
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    section {
+        scroll-margin-top: 76px;
+    }
+
+    .navbar {
+        min-height: 68px;
+        padding: 8px 14px;
+    }
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .bts-text {
+        font-size: 1.05rem;
+    }
+
+    .nav-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    body.nav-open .nav-links {
+        top: 72px;
+        max-height: calc(100vh - 88px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        align-items: stretch;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .nav-links a,
+    .nav-links a:not(.btn-projet):not(.dropbtn) {
+        width: 100%;
+        padding: 11px 12px;
+        border-radius: 8px;
+        font-size: 0.92rem;
+        white-space: normal;
+    }
+
+    .nav-links .btn-projet {
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .logo-area:hover .profile-card,
+    .logo-area:focus-within .profile-card,
+    .logo-area.profile-open .profile-card {
+        top: calc(100% + 8px);
+        left: 0;
+        width: min(330px, calc(100vw - 28px));
+    }
+
+    .logo-area:hover .avatar,
+    .logo-area:focus-within .avatar,
+    .logo-area.profile-open .avatar {
+        transform: none;
+    }
+
+    .hero,
+    .about-section,
+    .specialization-section,
+    .parcours-section,
+    .competences-section,
+    .veille-section,
+    .contact-section,
+    .entreprise-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100svh;
+        padding: 96px 0 24px;
+    }
+
+    .hero-content {
+        width: min(100% - 32px, 680px);
+    }
+
+    .hero-text h1 {
+        overflow-wrap: anywhere;
+    }
+
+    .title-sisr,
+    .promo {
+        max-width: 34rem;
+    }
+
+    .hero-illustration {
+        max-height: 42vh;
+        overflow: hidden;
+    }
+
+    .hero-illustration img {
+        max-height: 42vh;
+    }
+
+    .about-content-card,
+    .specialization-card,
+    .competence-card,
+    .parcours-node,
+    .parcours-card,
+    .footer-links,
+    .footer-contact-card {
+        min-width: 0;
+    }
+
+    .about-content-card {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    .about-title,
+    .specialization-title,
+    .parcours-title,
+    .competences-title,
+    .veille-title,
+    .contact-intro h2 {
+        font-size: clamp(1.75rem, 8vw, 2.2rem);
+    }
+
+    .parcours-tree {
+        padding-left: 14px;
+    }
+
+    .parcours-node,
+    .parcours-card {
+        margin-left: 14px;
+    }
+
+    .parcours-node::before,
+    .parcours-card::before {
+        left: -24px;
+    }
+
+    .specialization-grid,
+    .competences-grid,
+    .contact-grid,
+    .company-info-grid,
+    .project-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialization-card,
+    .competence-card,
+    .parcours-node,
+    .parcours-card,
+    .cert-card,
+    .project-card,
+    .company-profile {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .page-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 92px 16px 32px;
+    }
+
+    .card,
+    .e5-overview,
+    .company-profile,
+    .project-card {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .e5-overview {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .e5-sheet-preview {
+        width: min(100%, 300px);
+        max-height: 300px;
+    }
+
+    .e5-synthesis-button {
+        width: 100%;
+        justify-content: center;
+        margin: 18px 0 0;
+    }
+
+    .company-logo {
+        width: 112px;
+        height: 48px;
+        flex-basis: 112px;
+    }
+
+    .company-profile-content {
+        padding: 18px 16px;
+    }
+
+    .company-identity {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-brand,
+    .footer-links-wrapper {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        flex-basis: auto;
+    }
+
+    .footer-links-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links,
+    .footer-contact-card {
+        padding: 20px 18px;
+    }
+
+    .social-links {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        min-height: 64px;
+    }
+
+    .bts-text {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 82px;
+    }
+
+    .hero-content {
+        width: calc(100% - 28px);
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2rem, 12vw, 2.8rem);
+    }
+
+    .title-sisr {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .promo {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .social-icons {
+        gap: 18px;
+    }
+
+    .btn-welcome,
+    .about-btn,
+    .project-download,
+    .company-action-link {
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-actions {
+        flex-direction: column;
+    }
+
+    .about-btn {
+        width: 100%;
+    }
+
+    .parcours-tree {
+        gap: 18px;
+        padding-left: 8px;
+    }
+
+    .parcours-node,
+    .parcours-card {
+        margin-left: 10px;
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .specialization-card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .cert-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .company-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-banner {
+        min-height: 110px;
+    }
+
+    .company-action-link {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .back-to-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-text h1 {
+        font-size: 1.95rem;
+    }
+
+    .nav-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .avatar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .page-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .about-content-card,
+    .specialization-card,
+    .competence-card,
+    .footer-links,
+    .footer-contact-card {
+        padding-left: 14px;
+        padding-right: 14px;
     }
 }

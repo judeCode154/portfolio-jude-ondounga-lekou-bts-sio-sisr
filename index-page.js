@@ -16,7 +16,7 @@
         }
 
         function updateMenuForViewport() {
-            if (window.innerWidth > 900) closeMenu();
+            if (window.innerWidth > 1050) closeMenu();
         }
 
         const sectionLinks = Array.from(nav.querySelectorAll('a[href^="#"]'))
@@ -111,7 +111,7 @@
                     });
                 }
             }
-            if (window.innerWidth <= 900) closeMenu();
+            if (window.innerWidth <= 1050) closeMenu();
         });
 
         document.addEventListener('click', function (event) {
